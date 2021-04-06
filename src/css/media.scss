@@ -1,0 +1,407 @@
+@import "assests/vars";
+@import "assests/keyframes";
+// BREAKPOINT LAPTOP
+@media (max-width: $ss_laptop) {
+	.container{
+		max-width: 880px;
+	}
+	.wrapper{
+		font-size: 16px;
+	}
+	.s-first-screen{
+		margin-bottom: 50px;
+	}
+	.first-screen-block::before {
+		content: url(/images/first-screen-line-1.svg);
+		position: absolute;
+		background-size: cover;
+		top: 0;
+		left: 35%;
+		z-index: 2;
+		border-radius: 12px;
+		width: 100%;
+		min-height: 40.25em;
+	}
+	.first-screen-block {
+		min-height: 40.25em;
+	}
+	.options-block{
+		height:  31.25em;
+		&__title{
+			font-size: 28px;
+			margin-bottom: 25px;
+		}
+		&__name{
+			margin-bottom: 10px;
+			font-size: 26px;
+		}
+		&__text{
+			font-size: 18px;
+		}
+		&-container{
+			&--sw{
+				max-width: 292px;
+			}
+			&--mw{
+				max-width: 316px;
+			}
+			&--lw{
+				max-width: 368px;
+			}
+		}
+	}
+	.slider-controllers{
+		top: -110px;
+		&-options{
+			top: -65px;
+		}
+	}
+	.options-slider{
+		margin-bottom: 50px;
+	}
+	.icon-card{
+		max-width: 300px;
+		&:nth-child(4){
+			margin-right: 0;
+		}
+		&:nth-child(5){
+			margin-left: 0;
+		}
+	}
+	.s-bank_block{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		.info-block{
+			margin-bottom: 30px;
+			ul{
+				font-size: 14px;
+				width: 420px;
+				li {
+					left: -15px;
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+	.icon-cards-progress{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.icon-card{
+		&-progress{
+			margin: 20px 20px;
+		}
+		&__title{
+			font-size: 22px;
+		}
+	}
+}
+
+// BREAKPOINT TABLET
+@media (max-width: $ss_tablet) {
+	.wrapper{
+		font-size: 15px;
+	}
+	.container{
+		padding: 0 15px;
+	}
+	.section{
+		&--medium{
+			&, &-pt{
+				padding-top: 50px;
+			}
+		}
+		&--sm{
+			&, &-pt{
+				padding-top: 20px;
+			}
+		}
+	}
+	.first-screen-block{
+		position: relative;
+	}
+	.first-screen-block::before {
+		content: "";
+		position: absolute;
+		opacity: 0.7;
+		top: 0;
+		left: 0;
+		background: linear-gradient(140deg, #780206, #061161);
+		animation:	screen-bg 10s ease infinite;
+		z-index: 2;
+		border-radius: 12px;
+		min-height: 27.25em;
+	}.first-screen-block::after {
+		 content: none;
+	 }
+	.slider-controllers{
+		display: none;
+	}
+	.first-screen-block {
+		min-height: 27.25em;
+		&__profile{
+			padding-bottom: 5em;
+		}
+		&-logo{
+			position: relative;
+			width: 31.250em;
+			animation: textex 1s ease;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			animation-delay: 1s;
+			padding-right: 1px;
+			padding-left: 1px;
+		}
+		&__text{
+			position: relative;
+			font-size: 1.925em;
+			animation: textexw 1s ease;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			animation-delay: 1s;
+			padding: 0 20px;
+
+		}
+	}
+	.title{
+		font-size: 28px;
+		&--lg{
+			margin-bottom: 60px;
+		}
+	}
+	.options-block {
+		height:  25.25em;
+		padding: 1.1em 1.813em 5.25em 1.813em;
+		&__title{
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+		&__name{
+			margin-bottom:8px;
+			font-size: 20px;
+		}
+		&__text{
+			font-size: 15px;
+		}
+		&-container{
+			&--sw{
+				max-width: 251px;
+			}
+			&--mw{
+				max-width: 268px;
+			}
+			&--lw{
+				max-width: 262px
+			}
+		}
+	}
+	.s-missionary{
+		&-wrapper{
+			margin-top: 0;
+		}
+		&__text{
+			text-align: center;
+		}
+	}
+	.icon-cards{
+		display: flex;
+		flex-direction: column;
+	}
+	.icon-card{
+		&:nth-child(1){
+			align-self: flex-start;
+		}
+		&:nth-child(2){
+			align-self: flex-end;
+		}
+		&:nth-child(3){
+			align-self: flex-start;
+		}
+		&:nth-child(4){
+			align-self: flex-end;
+		}
+		&:nth-child(5){
+			align-self: flex-start;
+		}
+	}
+	.s-bank-wrapper{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.s-bank_block{
+		flex-wrap: wrap;
+		.info-block{
+			&-list {
+				margin-bottom: 30px;
+				max-width: 28.563em;
+				ul {
+					height: auto;
+					li {
+						position: relative;
+
+						&::before {
+							left: -35px;
+						}
+					}
+				}
+			}
+		}
+}
+
+// BREAKPOINT SM TABLET
+@media (max-width: $ss_sm_tablet) {
+	.wrapper{
+		font-size: 14px;
+	}
+	.first-screen-block {
+		&__profile{
+			padding-bottom: 5em;
+		}
+		&-logo{
+			position: relative;
+			width: 29.250em;
+			animation: textex 1s ease;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			animation-delay: 1s;
+		}
+		&__text{
+			min-width: 495px;
+			position: relative;
+			font-size: 1.725em;
+			animation: textToLeft 1s ease;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			animation-delay: 1s;
+		}
+	}
+	.options-block__name{
+		font-size: 16px;
+	}
+
+	.icon-card{
+		justify-content: normal;
+		min-height: 182px;
+		margin-bottom: 20px;
+		max-width: 300px;
+	}
+	.options-block{
+		&-container{
+			&--sw{
+				max-width: 200px;
+			}
+			&--mw{
+				max-width: 260px;
+			}
+			&--lw{
+				max-width: 269px;
+			}
+		}
+	}
+	.s-bank_block {
+		.info-block {
+			&-list {
+				ul {
+					height: auto;
+
+					li {
+						position: relative;
+
+						&::before {
+							left: -25px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// BREAKPOINT PHONE
+@media (max-width: $ss_phone) {
+	.wrapper{
+		width: calc(100% + 30px);
+		margin: 0 -15px;
+	}
+	.first-screen-block{
+		align-items: normal;
+		&__profile{
+			justify-self: flex-end;
+			align-self: flex-end;
+		}
+		&-logo{
+			width: 25.250em;
+			padding: 0 100px;
+		}
+		&__text{
+			min-width: 398px;
+			font-size: 4.375vw;
+			position: static;
+			padding-right: 70px;
+		}
+	}
+	.title{
+		font-size: 22px;
+	}
+	.options-block{
+		height: 20.25em;
+		&__name{
+			font-size: 14px;
+		}
+		&__title{
+			margin-bottom: 10px;
+			font-size: 17px;
+		}
+		&__text{
+			font-size: 12px;
+		}
+		&-container{
+			&--sw{
+				max-width: 170px;
+			}
+			&--mw{
+				max-width: 250px;
+			}
+			&--lw{
+				max-width: 262px;
+			}
+		}
+
+	}
+	.s-missionary__text{
+		font-size: 15px;
+	}
+	.icon-card{
+		&__title{
+			font-size: 20px;
+		}
+		&__text{
+			font-size: 13px;
+		}
+	}
+	.s-bank_block {
+		.info-block {
+			&-list {
+				max-width: 16.563em;
+				ul {
+					li {
+						font-size: 13px;
+						&::before {
+							left: -25px;
+							width: 12px;
+							height: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+}
+.icon{
+
+}

@@ -1,0 +1,51 @@
+@keyframes screen-bg {
+    0%{
+      background-position: 0 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0 50%;
+    }
+}
+@keyframes textex {
+  0%{
+    left: 0;
+  }
+  50%{
+  }
+  100%{
+    left: -100px;
+  }
+}
+@keyframes textexw {
+  0%{
+    left: 0;
+  }
+  50%{
+  }
+  100%{
+    left: -100px;
+  }
+}
+@keyframes textToLeft {
+  0%{
+    left: 0;
+  }
+  50%{
+  }
+  100%{
+    left: -20px;
+  }
+}
+@keyframes infoBlockToLeft {
+  0%{
+    left: 0;
+  }
+  50%{
+  }
+  100%{
+    left: -20px;
+  }
+}

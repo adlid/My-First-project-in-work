@@ -1,0 +1,40 @@
+mixin icon(id, className)
+	svg(xmlns:xlink="http://www.w3.org/1999/xlink" class=className)
+		use(xlink:href="#tmpl-hh__icon-" + id href="#tmpl-hh__icon-" + id)
+
+mixin video(video, thumbnail, source="youtube")
+	.video(data-video-id=video data-video-source=source)
+		img.video__preview(src=thumbnail)
+		.video__play-btn
+			+icon('play-btn')
+mixin first-screen-block()
+	.first-screen-block
+		.first-screen-block__profile
+			button.btn.btn-primary.vacancy-btn(type="button") Вакансии
+		.first-screen-block-logo
+			img.logo(src="/images/logo.png")
+		.first-screen-block__text
+			block
+mixin options-block(bgSrc)
+	.options-block
+		img.options-block__bg(src=bgSrc)
+		block
+
+mixin icon-card(icon, title)
+	.icon-card
+		+icon(icon, 'icon-card__icon')
+		.icon-card__title!=title
+		.icon-card__text
+			block
+mixin icon-card-progress(icon, title)
+	.icon-card-progress
+		+icon(icon, 'icon-card__icon')
+		.icon-card__title!=title
+		.icon-card__text
+			block
+mixin present-block(img)
+	.precent-block
+		img.present-block-img(src=img)
+mixin gallery-slider-slide(imgSrc)
+	.swiper-slide.gallery-slider-slide
+		img.gallery-slider-slide__img(src=imgSrc)

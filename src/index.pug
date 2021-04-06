@@ -1,0 +1,196 @@
+extends ./pug/layout
+
+block content
+    <!-- START SECTION FIRST SCREEN -->
+    .section.s-first-screen
+        .s-first-screen-slider.swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    +first-screen-block()
+                        | ВЕЛИКИЕ КОМПАНИИ СОСТОЯТ ИЗ<br> ВЕЛИКИХ СОТРУДНИКОВ
+                .swiper-slide
+                    +first-screen-block()
+                        | SQB ВЫСОКО ЦЕНИТ КАЖДОГО СОТРУДНИКА
+        .slider-controllers
+            .slider-controllers__arrow.slider-arrow.slider-arrow--prev.s-first-screen-nav-prev
+                +icon("arrow-left", "slider-arrow__icon")
+            .slider-controllers__dots.slider-dots.s-first-screen-slider-pagination
+            .slider-controllers__arrow.slider-arrow.slider-arrow--next.s-first-screen-nav-next
+                +icon("arrow-right", "slider-arrow__icon")
+    <!-- END SECTION FIRST SCREEN -->
+
+    <!-- START SECTION OPTIONS -->
+    .section.section--medium-pt.s-options
+        .container
+            .primary-wrapper
+                .title.title--lg СЧАСТЛИВЫЙ СОТРУДНИК — СЧАСТЛИВЫЙ КЛИЕНТ
+            .options-slider.swiper-container
+                .swiper-wrapper
+                    .swiper-slide
+                        .options-block.text-color--black(style='background:url("images/option-slider/option-1.jpg"); background-size: cover;background-position: center')
+                            .title.options-block__title.text-color--black ПОЧЕМУ SQB
+                            .options-block__name Вековая история банковских традиций
+                            .options-block__text.options-block-container--lw Банк, который в течении целого века  пережил великие исторические события,  в которых было много счастливых  и трагических событий, который смог  пройти через все это, сохранив и обогатив  самые лучшие банковские традиции.
+                                p  <br> Стань его частью и оставь свой след   в истории!
+                    .swiper-slide
+                        .options-block.text-color--white(style='background:url("images/option-slider/option-2.jpg"); background-size: cover;background-position: center')
+                            .title.options-block__title.text-color--white ПОЧЕМУ SQB
+                            .options-block__name ТОП 3 рейтинг
+                            .options-block__text.options-block-container--mw Наш Банк находится в тройке лучших банков страны вот уже 15 лет!
+                    .swiper-slide
+                        .options-block.text-color--white(style='background:url("images/option-slider/option-3.jpg"); background-size: cover;background-position: center')
+                            .title.options-block__title.text-color--white ПОЧЕМУ SQB
+                            .options-block__name  Мы — корпорация
+                            .options-block__text.options-block-container--sw Мы — это более 4000 сотрудников  в 45 филиалах по всей стране!
+                    .swiper-slide
+                        .options-block.text-color--black(style='background:url("images/option-slider/option-4.jpg"); background-size: cover;background-position: center')
+                            .title.options-block__title.text-color--black ПОЧЕМУ SQB
+                            .options-block__name Командный дух
+                            .options-block__text.options-block-container--sw Наши сотрудники стремятся  поддерживать работу команды, тобы достичь высоких результатов, потому что каждый из них чувствует себя востребованным и знает, что его вклад в общее дело будет замечен и оценен.
+                    .swiper-slide
+                        .options-block.text-color--blue(style='background:url("images/option-slider/option-5.jpg"); background-size: cover;background-position: center')
+                            .title.options-block__title ПОЧЕМУ SQB
+                            .options-block__name Развитие
+                            .options-block__text.options-block-container--mw Руководство Банка придерживается политики создания всех условий  для неприрывного развития сотрудников. <p> Начиная с первого дня в Банке и на протяжении всего периода работы выстроена система обучения, которая позволяет раскрыть свой потенциал,овершенствовать умения и навыки, и добиваться еще больших карьерных и финансовых возможностей </p>
+                    .swiper-slide
+                        .options-block.text-color--white(style='background:url("images/option-slider/option-6.jpg"); background-size: cover;background-position: center')
+                            .title.options-block__title.text-color--white ПОЧЕМУ SQB
+                            .options-block__name Кузница банковских кадров
+                            .options-block__text.options-block-container--lw Наш Банк является трамплином на пути карьерного роста.<br> Вырастая профессиональнов нашем Банке, сотрудники получают предложения из других организаций с такими позициями уровня топ — менеджера, как директор департамента, заместитель Председателя Правления, Председатель Правления и другие.
+                .slider-controllers.slider-controllers--options
+                    .slider-controllers__arrow.slider-arrow.slider-arrow--prev.options-nav-prev
+                        +icon("arrow-prev", "slider-arrow__icon")
+                    .slider-controllers__dots.slider-dots.options-slider-pagination
+                    .slider-controllers__arrow.slider-arrow.slider-arrow--next.options-nav-next
+                        +icon("arrow-next", "slider-arrow__icon")
+                        //.swiper-pagination.options-block__pagination
+    <!-- END SECTION OPTIONS -->
+
+    <!-- START SECTION OUR MISSIONS -->
+    .section.section--sm-pt.s-missionary
+        .s-missionary-wrapper
+            .title.title--sm НАША МИССИЯ
+            .sm-text МЫ ПОМОГАЕМ СОЗДАВАТЬ БЛАГА ДЛЯ ЧЕЛОВЕЧЕСТВА, СОХРАНЯЯ И ПРИУМНОЖАЯ ИХ
+    <!-- END SECTION OUR MISSIONS -->
+
+    <!-- START SECTION OUR WOTRH -->
+    .section.section--medium-pt
+        .container
+            .title.title--mp НАШИ ЦЕННОСТИ
+            .icon-cards
+                 +icon-card('human','Люди. Во благо общества')
+                    | Забота о своих сотрудниках,создание  условий для повышения качества их  жизни в процессе выполнения своих обязанностей
+                 +icon-card('handshake','Ответственность')
+                    | Сдерживание обещания, данные сотрудником
+                 +icon-card('shield','Безопасность')
+                    | Создание безопасной среды для ведения деятельности
+                 +icon-card('cup','Совершенствование')
+                    | Мы не останавливаемся на достигнутом и стремиться довести до совершенства каждое начинание
+                 +icon-card('conference','Синергия')
+                    | Объединившись, достигать невероятных результатов
+
+    <!-- END SECTION OUR WOTRH -->
+
+    <!-- START SECTION OUR BANK -->
+    .section.section--medium-pt.s-bank
+        .container
+            .primary-wrapper.s-bank-wrapper
+                .title.title--mp О БАНКЕ
+                .s-bank_block
+                    .info-block-list
+                        ul
+                            li SQB сегодня — это один из лидеров среди крупнейших банков Узбекистана по своим рыночным позициям,по обьему активов и капитал, по своим финансовым результатам и масштабам инфраструктуры
+                            li SQB сыграл ключевую роль, приняв активное участие в становлении всей банковской системы страны.
+                            li SQB финансировал огромные стратегические проекты Республики Узбекистан.
+                            li SQB является обладателем самой большой клиентской базы  корпоративных клиентов.
+                            li Первый в Узбекистане корпоративный выпуск евробондов на LSE на сумму $300 млн.
+                            li SQB очень высоко ценит и заботится о своих сотрудниках.Банк предлагает комфортные условия труда, регулярно организует мероприятия по совместному отдыху коллектива в нерабочее время, заботится о физическоми духовном здоровье сотрудников, уделяет большое внимание повышению квалификации.
+                    .info-block-img
+                        img.s-bank-img(src="/images/info-bank-img.jpg")
+    <!-- END SECTION OUR BANK -->
+
+    <!-- START SECTION OUR HISTORY -->
+    .section.section--medium-pt.s-history
+        .container
+            .primary-wrapper.s-history-wrapper
+                .title.title--mp ИСТОРИЯ НАШЕГО БАНКА
+                .company-slider.swiper-container
+                    .swiper-wrapper
+                        .swiper-slide
+                            //+company-block("Новаторство", "/images/option/option-1.jpg")
+                                //	p Жилые комплексы компании разрабатываются с&#160;учетом передовой международной практики и&#160;при коллегиальном участии мировых опытных консультантов в&#160;части архитектуры и&#160;дизайна, планирования и&#160;проектного управления.
+                                //	p Каждый проект компании — это новое решение, которое позволяет TAU Development занимать авангардные позиции на&#160;рынке жилой недвижимости города Алматы.
+                        .swiper-slide
+                            //+company-block("Профессионализм", "/images/option/option-1.jpg")
+                            //	p Все сотрудники компании — профессионалы своего дела, ориентированные на&#160;лучшие результаты. Успех каждого проекта обеспечивается высококвалифицированным подходом на&#160;каждом этапе работы:
+                            //	| - проектирование
+                            //	br
+                            //	| - строительство
+                            //	br
+                            //	| - продажа
+                        .swiper-slide
+                            //+company-block("Результат", "/images/option/option-1.jpg")
+                            //	p На сегодня все проекты компании получили признани на&#160;международных конкурсах и&#160;площадках (таких как World/International Property Awards — Asia Pacific, MIPIM), что подтверждает прогрессивность компании, инновационность проектов и&#160;их соответствие международным стандартам.
+                .slider-nav-controllers.company-nav-controllers
+                    button(type='button').slider-nav__arrow.slider-nav__arrow--prev.company-nav-prev
+                        +icon('arrow-left')
+                    .swiper-pagination.company-slider-pagination
+                    button(type='button').slider-nav__arrow.slider-nav__arrow--next.company-nav-next
+                        +icon('arrow-right')
+                            //+history-block("images/option-slider/option-1.jpg", "Вековая история банковских традиций")
+                                // Банк, который в течении целого века  пережил великие исторические события,  в которых было много счастливых  и трагических событий, который смог  пройти через все это, сохранив и обогатив  самые лучшие банковские традиции.Стань его частью и оставь свой след   в истории!
+    <!-- END SECTION OUR HISTORY -->
+
+    <!-- START SECTION TODAY -->
+    .section.section--medium-pt.s-present
+        .container
+            .s-present-wrapper
+                .title.title--mp SQB СЕГОДНЯ
+                .present-slider-nav
+                        .swiper-container.present-slider
+                            .swiper-wrapper
+                                .swiper-slide
+                                    +present-block("/images/present-slider/present-1.jpg")
+                                .swiper-slide
+                                    +present-block("/images/present-slider/present-2.jpg")
+                                .swiper-slide
+                                    +present-block("/images/present-slider/present-3.jpg")
+                                .swiper-slide
+                                    +present-block("/images/present-slider/present-4.jpg")
+                                .swiper-slide
+                                    +present-block("/images/present-slider/present-4.jpg")
+                                .swiper-slide
+                                    +present-block("/images/present-slider/present-6.jpg")
+                                .swiper-slide
+                                    +present-block("/images/present-slider/present-7.jpg")
+                        .slider-controllers
+                            .slider-controllers__arrow.slider-arrow.slider-arrow--prev.present-nav-prev
+                                +icon("arrow-prev", "slider-arrow__icon")
+                            .slider-controllers__dots.slider-dots.present-slider-pagination
+                            .slider-controllers__arrow.slider-arrow.slider-arrow--next.present-nav-next
+                                +icon("arrow-next", "slider-arrow__icon")
+    <!-- END SECTION TODAY -->
+
+    <!-- START SECTION VIDEO -->
+    .section.section--normal.s-video
+        .container
+    <!-- END SECTION VIDEO -->
+
+    <!-- START SECTION OUR PROGRESS-->
+    .section.section--medium-pt.s-progress
+        .container
+            .s-progress-wrapper
+                .title.title--mp НАШИ ДОСТИЖЕНИЯ
+                .icon-cards-progress
+                    +icon-card-progress('team','«Лучший Team — building среди государственных предприятий» 2019')
+                        | Сертификат от Da Vinci ManagementConsulting
+                    +icon-card-progress('celebrat','«Лучшее HR — мероприятие года среди государственных предприятий» 2019')
+                        | Сертификат от Da Vinci ManagementConsulting
+                    +icon-card-progress('char','«Прорыв года» 2019')
+                        | от Central Asia Employer Brand Award
+    <!-- END SECTION OUR PROGRESS-->
+
+    <!-- START SECTION VACANCY-->
+    .section.section--medium-pt
+        .title ВАКАНСИИ
+    <!-- END SECTION VACANCY-->
